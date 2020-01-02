@@ -1,0 +1,28 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница истории <span class="sparkline bar"></span>
+  </h3>
+  <div *ngIf="!filterApplied" class="pull-right">
+    <button class="btn-sm btn btn-primary-outline" (click)="openFilter()">
+      <i class="fa fa-filter"></i> Настроить фильтр
+    </button>
+  </div>
+  <div *ngIf="filterApplied" class="pull-right">
+    <button class="btn-sm btn btn-primary-outline" (click)="resetFilter()">
+      <i class="fa fa-filter"></i> Сбросить фильтр
+    </button>
+  </div>
+</div>
+<div *ngIf="!isLoaded">Пожалуйста, подождите</div>
+<div *ngIf="isLoaded">
+  <section class="section">
+    <u-history-chart [results]="chartData"></u-history-chart>
+  </section>
+  <section class="section">
+    <u-history-events [categories]="categories" [events]="filteredEvents"></u-history-events>
+  </section>
+  <section *ngIf="isFilterVisible" class="section">
+    <u-history-filter (filterCancel)="closeFilter()" (filterApply)="applyFilter($event)" [categories]="categories">
+    </u-history-filter>
+  </section>
+</div>

@@ -1,0 +1,23 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница записей <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<section *ngIf="!isLoaded" class="section">Пожалуйста, подождите...</section>
+
+<section *ngIf="isLoaded" class="section">
+  <div class="row">
+    <div class="col-md-6">
+      <u-add-event [categories]="categories"></u-add-event>
+    </div>
+    <div class="col-md-6">
+      <u-add-category (onCategoryAdd)="newCategoryAdded($event)"></u-add-category>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <u-edit-category [categories]="categories" (onCategoryEdit)="categoryWasEdited($event)"></u-edit-category>
+    </div>
+  </div>
+</section>

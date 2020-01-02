@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header bordered">
+    <div class="header-block">
+      <h3 class="title">Редактировать категорию</h3>
+    </div>
+  </div>
+  <div class="card-block">
+    <div *ngIf="message.text" class="alert alert-{{ message.type }}">{{ message.text }}</div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label class="control-label" for="edit-category">Выберите категорию</label>
+        <select name="edit" class="form-control" id="edit-category" [(ngModel)]="currentCategoryId"
+          [ngModelOptions]="{standalone: true}" (change)="onCategoryChange()">
+          <option *ngFor="let item of categories" [value]="item.id">
+            {{ item.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error': name.invalid && name.touched}">
+        <label class="control-label" for="category-name">Введите название</label>
+        <input type="text" id="category-name" class="form-control" name="name" #name="ngModel"
+          [ngModel]="currentCategory.name" required>
+        <span *ngIf="name.invalid && name.touched" class="form-help-text">Название не может быть пустым!</span>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
+        <label class="control-label" for="category-value">Введите лимит</label>
+        <input type="number" id="category-value" class="form-control" name="capacity" #capacity="ngModel"
+          [ngModel]="currentCategory.capacity" required min="1">
+        <span *ngIf="capacity.invalid && capacity.touched" class="form-help-text">Литит не может быть пустым и меньше
+          1!</span>
+      </div>
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Редактировать</button>
+    </form>
+  </div>
+</div>

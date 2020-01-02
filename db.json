@@ -1,0 +1,190 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@mail.ru",
+      "password": "123456",
+      "name": "Администратор"
+    },
+    {
+      "email": "test@test.ru",
+      "password": "123456",
+      "name": "Саша",
+      "id": 2
+    },
+    {
+      "email": "fsdf@fds",
+      "password": "4234235",
+      "name": "532423",
+      "id": 3
+    },
+    {
+      "email": "srew@rewre",
+      "password": "4324235",
+      "name": "23523",
+      "id": 4
+    },
+    {
+      "email": "rwerw@r3",
+      "password": "wrerwtew",
+      "name": "tweetwet",
+      "id": 5
+    },
+    {
+      "email": "fsfs@fdsgsdgds",
+      "password": "32523235235",
+      "name": "523523523",
+      "id": 6
+    },
+    {
+      "email": "fdsfsd@dsf",
+      "password": "rr233232",
+      "name": "dsfsdg",
+      "id": 7
+    },
+    {
+      "email": "fdsfs@ds",
+      "password": "52532532",
+      "name": "532532",
+      "id": 8
+    },
+    {
+      "email": "fsfd@dsdsd",
+      "password": "gdsgsdg",
+      "name": "gdsgdsgsd",
+      "id": 9
+    },
+    {
+      "email": "fsdfsd@fsdfd",
+      "password": "23523523",
+      "name": "532523",
+      "id": 10
+    }
+  ],
+  "bill": {
+    "number": 890,
+    "currency": "EUR"
+  },
+  "categories": [
+    {
+      "name": "Дом",
+      "capacity": 500,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 300,
+      "id": 2
+    },
+    {
+      "name": "Машина",
+      "capacity": 500,
+      "id": 3
+    },
+    {
+      "name": "Кот",
+      "capacity": 100,
+      "id": 4
+    },
+    {
+      "name": "Собака",
+      "capacity": 100,
+      "id": 5
+    },
+    {
+      "name": "Работа",
+      "capacity": 50,
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "type": "outcome",
+      "amount": 10,
+      "category": 1,
+      "date": "12.06.2017 19:49:02",
+      "description": "Гвозди",
+      "id": 1
+    },
+    {
+      "type": "outcome",
+      "amount": 200,
+      "category": 1,
+      "date": "28.10.2019 22.27.05",
+      "description": "Шифер",
+      "id": 2
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": 3,
+      "date": "28.10.2019 22.27.22",
+      "description": "Заправка",
+      "id": 3
+    },
+    {
+      "type": "outcome",
+      "amount": 50,
+      "category": 4,
+      "date": "28.10.2019 22.27.35",
+      "description": "Календула",
+      "id": 4
+    },
+    {
+      "type": "outcome",
+      "amount": 50,
+      "category": 5,
+      "date": "28.10.2019 22.27.58",
+      "description": "Куртка",
+      "id": 5
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 6,
+      "date": "28.10.2019 22.28.57",
+      "description": "Зарплата",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 20,
+      "category": 6,
+      "date": "01.11.2019 22.29.12",
+      "description": "Дорога",
+      "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 10,
+      "category": 2,
+      "date": "01.11.2019 22.29.38",
+      "description": "Хлеб",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 20,
+      "category": 6,
+      "date": "28.10.2019 22.31.53",
+      "description": "Дорога",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 70,
+      "category": 4,
+      "date": "28.10.2019 22.32.05",
+      "description": "Филе",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 20,
+      "category": 2,
+      "date": "26.10.2019 22.29.38",
+      "description": "Колбаса",
+      "id": 11
+    }
+  ]
+}
